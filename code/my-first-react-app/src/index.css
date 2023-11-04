@@ -1,0 +1,42 @@
+body {
+  background-color: pink;
+}
+
+h1 {
+  color: red;
+}
+
+.text1 {
+  background-color: yellow;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: aqua;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  min-height: 200px;
+  background-color: #EBEBEB;
+  border: solid 2px #666;
+  border-radius: 20px;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 2px black;
+  box-shadow: 10px 10px 10px #AAA;
+}
