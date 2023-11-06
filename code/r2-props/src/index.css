@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aquamarine;
+}
+
+.card {
+  width: 100px;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+}
