@@ -1,8 +1,14 @@
-function Card(props) {  
+// Criar um cartao
+// que recebe um nome e uma imagem
+// mostrar pelo menos 3 cartoes diferentes
 
+function Card({ name, imageURL }) {  
     return(
         <>
-            <p className="card">{ props.name }</p>
+            <div className="card">
+                <img src={ imageURL} alt={ name } />
+                <p>{ name }</p>
+            </div>
         </>
     )
 }
