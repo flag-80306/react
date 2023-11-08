@@ -1,8 +1,7 @@
-
-function Header() {
+function Header({episodeId, title}) {
     return (
         <header>
-            <h1>SWC - Star Wars Characters</h1>
+            <h2>Star Wars Episode {episodeId} - {title}</h2>
         </header>
     )
 }

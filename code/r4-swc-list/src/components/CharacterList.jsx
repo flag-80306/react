@@ -1,17 +1,16 @@
-import empireData from "../services/empireData";
-
-function CharacterList() {
-    
-    console.log(empireData)
+function CharacterList({characters}) {
 
     return (
-        <section>
-            <ul>
-                {/* {characters.map(function(character) {
-                    return <li>{ character }</li>
-                })} */}
-            </ul>
-        </section>
+        <>
+            <section>
+                <h4>Characters:</h4>
+                <ul>
+                    {characters.map(function(character) {
+                        return <li>{ character }</li>
+                    })}
+                </ul>
+            </section>
+        </>
     )
 }
 
