@@ -7,8 +7,24 @@ import { useState } from "react"
 
 
 function App() {
-  function clickHandler() {
+  function subtract10() {
+    setCount(count - 10)
+  }
+
+  function subtract1() {
+    setCount(count - 1)
+  }
+
+  function add1() {
     setCount(count + 1)
+  }
+
+  function add10() {
+    setCount(count + 10)
+  }
+
+  function reset() {
+    setCount(0)
   }
 
   const [count, setCount] = useState(0)
@@ -16,10 +32,11 @@ function App() {
   return (
     <>
       <div>{ count }</div>
-      <button onClick={ clickHandler }>Minus 10</button>
-      <button >Minus 1</button>
-      <button >Plus 1</button>
-      <button >Plus 10</button>
+      <button onClick={ subtract10 }>Minus 10</button>
+      <button onClick={ subtract1 }>Minus 1</button>
+      <button onClick={ add1 }>Plus 1</button>
+      <button onClick={ add10 }>Plus 10</button>
+      <button onClick={ reset }>Back to Zero!</button>
     </>
   )
 }
