@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="name" id="input1" />
+    <p id="greeting">Hello [whatver your name is]</p>
+
+    <script>
+        const input1 = document.querySelector("#input1");
+        const greeting = document.querySelector("#greeting");
+
+        input1.addEventListener("input", function (event) {
+            greeting.textContent = "Hello " + event.target.value;
+        });
+
+    </script>
+</body>
+
+</html>
