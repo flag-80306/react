@@ -1,18 +1,16 @@
 import { useState, useEffect } from "react"
-import fetchPokemonService from "../services/fetchPokemonService"
+import pokeAPIService from "../services/pokeAPIService"
 
-function PokeCard() {
+function PokeCard({pokeURL}) {
 
     const [pokeInfo, setPokeInfo] = useState({})
 
-    async function getPokemonInfo() {
-        const result = await fetchPokemonService.fetchPokemonInfo("https://pokeapi.co/api/v2/pokemon/25")
-        console.log(result)
-        setPokeInfo(result)
-    }
-
     useEffect(function() {
-        getPokemonInfo()
+        (async function () {
+            const result = await pokeAPIService.getPokemon(pokeURL)
+            console.log(result)
+            setPokeInfo(result)
+        })()
     }, [])
 
     return (

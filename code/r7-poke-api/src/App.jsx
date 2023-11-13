@@ -1,10 +1,10 @@
-import PokeCard from "./components/PokeCard"
+import CardContainer from "./components/CardContainer"
 
 function App() {
 
   return (
     <>
-      <PokeCard />
+      <CardContainer />
     </>
   )
 }

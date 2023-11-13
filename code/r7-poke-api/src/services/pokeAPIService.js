@@ -10,7 +10,7 @@ function padIdWithZeros(id) {
     return id.toString().padStart(4, "0")
 }
 
-async function fetchPokemonInfo(url) {
+async function getPokemon(url) {
     const response = await fetch(url)
     const result = await response.json()
         
@@ -24,6 +24,14 @@ async function fetchPokemonInfo(url) {
     }
 }
 
+async function getPokemonList(limit = 25) {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=" + limit)
+    const result = await response.json()
+
+    return result.results
+}
+
 export default {
-    fetchPokemonInfo
+    getPokemon,
+    getPokemonList
 }
