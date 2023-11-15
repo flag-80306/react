@@ -16,8 +16,11 @@ function CardContainer() {
     return (
         <>
             <div className="cardContainer">
+                {/* <PokeCard pokeURL="https://pokeapi.co/api/v2/pokemon/25" />
+                <PokeCard pokeURL="https://pokeapi.co/api/v2/pokemon/250" />
+                <PokeCard pokeURL="https://pokeapi.co/api/v2/pokemon/500" /> */}
                 {pokeList.map(item =>
-                    <PokeCard key={item.url} pokeURL={item.url}/>
+                    <PokeCard key={item.url} pokeURL={item.url} />
                 )}
             </div>
         </>
