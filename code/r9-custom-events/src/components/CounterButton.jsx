@@ -1,11 +1,11 @@
-function CounterButton({onSmash}) {
+function CounterButton({onSmash, buttonLabel = "[placeholder]"}) {
     function handleIt() {
         onSmash()
     }
 
     return (
         <>
-            <button onClick={handleIt}>GO UP</button>
+            <button onClick={handleIt}>{ buttonLabel }</button>
         </>
     )
 }

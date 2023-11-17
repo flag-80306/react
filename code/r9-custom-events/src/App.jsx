@@ -12,13 +12,22 @@ function App() {
     }
   }
 
+  function handleButtonDown(value) {
+    if (value) {
+      setCounter(counter + value)
+    } else {
+      setCounter(counter - 1)
+    }
+  }
+
   const [counter, setCounter] = useState(0)
 
   return (
     <>
       <CounterDisplay counter={counter} />
       <br />
-      <CounterButton onSmash={handleButtonUp} />
+      <CounterButton buttonLabel="DOWN" onSmash={handleButtonDown} />
+      <CounterButton buttonLabel="UP" onSmash={handleButtonUp} />
     </>
   )
 }
