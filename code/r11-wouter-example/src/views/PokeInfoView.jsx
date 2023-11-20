@@ -1,8 +1,14 @@
-function PokeInfoView({ pokeName }) {
+import PokemonInfo from "../components/PokemonInfo"
+
+function PokeInfoView({ params }) {
+
     return (
         <>
             Escolheste o...
-            <h2>{ pokeName }</h2>
+            {params.name}
+            <br />
+            <br />
+            <PokemonInfo name={params.name}/>
         </>
     )
 }

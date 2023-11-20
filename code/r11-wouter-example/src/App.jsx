@@ -29,10 +29,11 @@ function App() {
         <Route path="/faq">
           <FAQView />
         </Route>
-        <Route path="/pokemon" component={PokeView} /> {/* Exemplo para mostrar 2 formas diferentes de colocar Views*/}
-        <Route path="/pokemon/:name">
-          { params => <PokeInfoView pokeName={params.name}/> }
-        </Route>
+        <Route path="/pokemon" component={PokeView} />
+        {/* <Route path="/pokemon/:name">
+          { params => <PokeInfoView params={params}/> }
+        </Route> */}
+        <Route path="/pokemon/:name" component={PokeInfoView} />
         <Route component={NotFoundView} /> {/* Exemplo para mostrar 2 formas diferentes de colocar Views*/}
       </Switch>
       <footer>
