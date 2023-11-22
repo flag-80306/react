@@ -1,4 +1,4 @@
-import { Link, Route, Switch } from "wouter" // npm i wouter
+import { Route, Switch } from "wouter" // npm i wouter
 
 import AboutView from "./views/AboutView"
 import HomeView from "./views/HomeView"

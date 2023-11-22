@@ -18,8 +18,6 @@ function PokemonInfo({name}) {
         })()
     }, [name])
 
-
-
     return (
         <>
             <img src={pokeInfo.sprites?.other["official-artwork"].front_default} />
