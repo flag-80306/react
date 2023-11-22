@@ -7,6 +7,7 @@ function HomeView() {
       <div className="homepageBox">
         <CounterDisplay />
       </div>
+      <h3>The End!</h3>
     </>
   );
 }
