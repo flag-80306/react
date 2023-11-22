@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import pokeApiService from "../services/pokeApiService";
-import { useDispatch } from "react-redux";
-import { add } from "../app/favouritesSlice";
+import FavouritesButton from "./FavouritesButton";
 
 PokeCard.propTypes = {
   url: PropTypes.string,
@@ -11,8 +10,6 @@ PokeCard.propTypes = {
 function PokeCard({ url }) {
   const [pokemonInfo, setPokemonInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  const dispatch = useDispatch();
 
   useEffect(
     function () {
@@ -24,15 +21,6 @@ function PokeCard({ url }) {
     },
     [url]
   );
-
-  function addToFavourites() {
-    const pokemon = {
-      name: pokemonInfo.name,
-      url: pokemonInfo.url,
-    };
-
-    dispatch(add(pokemon));
-  }
 
   if (isLoading) {
     return (
@@ -49,8 +37,8 @@ function PokeCard({ url }) {
 
         <div>{pokemonInfo.formattedId}</div>
         <div>{pokemonInfo.name}</div>
+        <FavouritesButton id={pokemonInfo.id} name={pokemonInfo.name} />
       </div>
-      <button onClick={addToFavourites}>Add to favourites</button>
     </>
   );
 }

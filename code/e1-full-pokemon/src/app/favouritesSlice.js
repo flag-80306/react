@@ -21,12 +21,12 @@ export const favouritesSlice = createSlice({
   name: 'favourites',
   initialState,
   reducers: {
-    add: (state, action) => {
+    addPokemonToFavourites: (state, action) => {
         state.value.push(action.payload)
     },
   },
 })
 
-export const { add } = favouritesSlice.actions
+export const { addPokemonToFavourites } = favouritesSlice.actions
 
 export default favouritesSlice.reducer
