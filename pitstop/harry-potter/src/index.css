@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bookCard {
+  border: solid 2px red;
+  border-radius: 5px;
+
+  padding: 10px;
+  max-width: 400px;
+  min-width: 220px;
+}
+
+.bookCard > img {
+  display: block;
+  
+  width: 190px;
+  margin: 0 auto;
+}
+
+.bookCard > section {
+  color: dodgerblue;
+}
+
+.bookCard .viewBookLink {
+  display: block;
+  text-align: center;
+  background-color: magenta;
+  border-radius: 5px;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.bookCard .viewBookLink:hover {
+  
+  background-color: darkmagenta;
+  
+}
