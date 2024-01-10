@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const originalArray = [
+            {
+                name: "sunday"
+            },
+            {
+                name: "monday"
+            },
+            {
+                name: "tuesday"
+            },
+            {
+                name: "wednesday"
+            },
+            {
+                name: "thursday"
+            },
+            {
+                name: "friday"
+            },
+            {
+                name: "saturday"
+            },
+        ]
+
+        console.log(originalArray);
+
+        const reorderedArray = [];
+
+        // let counter = 0;
+        // let index = 5;
+        // while (counter < originalArray.length) {
+        //     console.log(counter)
+
+        //     console.log(originalArray[index].name)
+
+        //     reorderedArray.push(originalArray[index])
+
+        //     counter++;
+        //     index++;
+        //     if (index >= originalArray.length) {
+        //         index = 0
+        //     }
+        // }
+
+        let index = 5;
+        originalArray.forEach(function () {
+            reorderedArray.push(originalArray[index])
+            index++;
+            if (index >= originalArray.length) {
+                index = 0;
+            }
+        });
+
+        const now = new Date();
+        const currentWeekday = now.getDay();
+
+        const nextDays = originalArray.slice(currentWeekday + 1);
+        const previousDays = originalArray.slice(0, currentWeekday + 1);
+
+        const newArray = nextDays.concat(previousDays);
+
+        console.log(nextDays);
+        console.log(previousDays);
+        console.log(newArray);
+
+        const newArray2 = originalArray
+            .slice(currentWeekday + 1)
+            .concat(originalArray.slice(0, currentWeekday + 1));
+        console.log(newArray2);
+
+    </script>
+</body>
+
+</html>

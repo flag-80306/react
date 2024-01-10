@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imageContainer {
+            background-color: pink;
+            width: 200px;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .imageInnerContainer {
+            display: flex;
+            margin-left: 0;
+            transition: 5s;
+        }
+
+        .imageInnerContainer>img {
+            background-color: antiquewhite;
+            width: 200px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="imageContainer">
+        <div class="imageInnerContainer">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/0/0b/Marge_Simpson.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/a/aa/Bart_Simpson_200px.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

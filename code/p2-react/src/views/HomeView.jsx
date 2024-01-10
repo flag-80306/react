@@ -5,7 +5,7 @@ function HomeView() {
   const [data, setData] = useState([]);
   useEffect(function () {
     (async function () {
-      const url = "/api/data.json";
+      const url = "/api/v2/somewthing.json";
 
       const response = await fetch(url);
       const result = await response.json();
@@ -20,7 +20,7 @@ function HomeView() {
       <ul>
         {data.map((element) => (
           <li key={element.id}>
-            <Link href={"/details/" + element.id}>{element.name}</Link>
+            <Link to={"/details/" + element.id}>{element.name}</Link>
           </li>
         ))}
       </ul>

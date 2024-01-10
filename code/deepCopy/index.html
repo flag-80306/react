@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const originalNumbers = [
+            {
+                name: "A"
+            },
+            {
+                name: "B"
+            },
+            {
+                name: "C"
+            },
+            {
+                name: "D"
+            },
+        ];
+        // SHALLOW COPY
+        // const numbers = [...originalNumbers];
+
+        // DEEP COPY
+        const numbers = JSON.parse(JSON.stringify(originalNumbers));
+
+        numbers[2].name = "ZZZ";
+
+        console.log(originalNumbers)
+        console.log(numbers)
+    </script>
+</body>
+
+</html>
